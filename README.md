@@ -7,7 +7,7 @@
     It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.
     <br />
     <strong>Site URL / Demo » </strong>
-    <a href="https://dikology.github.io/portfolio"> dikology.github.io/portfolio</a>
+    <a href="https://dikology.github.io/"> dikology.github.io/</a>
     <br />
     <br />
   </p>
