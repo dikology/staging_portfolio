@@ -1,50 +1,42 @@
 import React from 'react';
-import Link from 'next/link'
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
-export const Contact = ({ title, description, buttons }) => {
-	return (
-		<div id="contact" className="bg-white py-5 px-5">
-			<div className="container">
-				<h1 className="text-primary fw-bold">{title}</h1>
-				<div className="px-sm-5">
-					<p>{description}</p>
-					<div className="">
-						{buttons.map((value, index) => (
-							(value.isPrimary) ?
-								<Link key={index} href={value.link}>
-									<a className="btn btn-primary my-1 mx-3">
-										{value.title}
-									</a>
-								</Link>
-								:
-								<Link key={index} href={value.link}>
-									<a className="btn btn-outline-primary my-1 mx-3">
-										{value.title}
-									</a>
-								</Link>
-						))}
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-}
+import { SocialIcons } from './NavStyles';
+import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
 
-export const Footer = () => {
-	return (
-		<footer className="bg-secondary text-center py-2 px-5">
-			<div className="container text-muted">
-				<small>&copy; 2023 {" "}
-					<Link href="https://github.com/dikology">
-						<a>dikology</a>
-					</Link>
-					. Open sourced with love under {" "}
-					<Link href="https://github.com/dikology/portfolio/blob/main/LICENSE">
-						<a>MIT</a>
-					</Link>
-					{" "} License
-				</small>
-			</div>
-		</footer>
-	);
-}
+const Footer = () => {
+  return (
+    <FooterWrapper>
+		<LinkList>
+			<LinkColumn>
+				<LinkTitle>Telegram</LinkTitle>
+				<LinkItem href="https://t.me/dikobrist">@dikobrist</LinkItem>
+			</LinkColumn>
+			<LinkColumn>
+				<LinkTitle>Email</LinkTitle>
+				<LinkItem href="mailto:dgimaletdinov@gmail.com">dgimaletdinov@gmail.com</LinkItem>
+			</LinkColumn>
+			<SocialIconsContainer>
+				<CompanyContainer>
+					<Slogan>
+						slogan
+					</Slogan>
+				</CompanyContainer>
+				<SocialContainer>
+				<SocialIcons href="https://github.com/dikology">
+					<AiFillGithub size="3rem" />
+				</SocialIcons>
+				<SocialIcons href="https://linkedin.com/dikology">
+					<AiFillLinkedin size="3rem" />
+				</SocialIcons>
+				<SocialIcons href="https://instagram.com/unpotato_lifestyle">
+					<AiFillInstagram size="3rem" />
+				</SocialIcons>
+				</SocialContainer>
+			</SocialIconsContainer>
+		</LinkList>
+	</FooterWrapper>
+  );
+};
+
+export default Footer;

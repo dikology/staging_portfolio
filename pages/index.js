@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <Fragment>
       <Layout>
-        <Header seo={SEO} />
         <Section grid>
           <Intro />
           <BgAnimation />
