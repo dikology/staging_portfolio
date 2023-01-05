@@ -1,46 +1,53 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 
-export const Nav = ({ title, links }) => {
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
+import { DiCssdeck } from 'react-icons/di'
+import { FaTelegramPlane } from 'react-icons/fa'
 
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './NavStyles'
 
-  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-
-  return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-secondary">
-      <div className="container">
-        <Link href="/">
-          {/* <Image src={Logo} alt="Logo" width="36" height="36" className="vertical-align-middle" /> */}
-          <a className="navbar-brand">
-            <span className="">{title}</span>
-          </a>
+const Nav = () => (
+  <Container>
+    <Div1>
+      <Link href="/">
+        <a style={{display: "flex", alignItems: "center", color:'white', marginBottom:'20px'}}>
+          <DiCssdeck size="3rem" /> <Span>Dikology</Span>
+        </a>
+      </Link>
+    </Div1>
+    <Div2>
+      <li>
+        <Link href="#projects">
+          <NavLink>Projects</NavLink>
         </Link>
-        <button
-          className="custom-toggler navbar-toggler"
-          type="button" data-toggle="collapse"
-          data-target="#navbarsExample09"
-          aria-controls="navbarsExample09"
-          aria-expanded={!isNavCollapsed ? true : false}
-          aria-label="Toggle navigation"
-          onClick={handleNavCollapse}
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+      </li>
+      <li>
+        <Link href="#tech">
+          <NavLink>What I do</NavLink>
+        </Link>
+      </li>
+      <li>
+        <Link href="#about">
+          <NavLink>About</NavLink>
+        </Link>
+      </li>
+    </Div2>
+    <Div3>
+    <SocialIcons href="https://t.me/dikobrist">
+        <FaTelegramPlane size="3rem" />
+      </SocialIcons>
+      <SocialIcons href="https://github.com/dikology">
+        <AiFillGithub size="3rem" />
+      </SocialIcons>
+      <SocialIcons href="https://linkedin.com/dikology">
+        <AiFillLinkedin size="3rem" />
+      </SocialIcons>
+      <SocialIcons href="https://instagram.com/unpotato_lifestyle">
+        <AiFillInstagram size="3rem" />
+      </SocialIcons>
+    </Div3>
+  </Container>
+)
 
-        <div
-          className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}
-          id="navbarsExample09"
-        >
-          <div className="navbar-nav">
-            {links.map((value, index) => (
-              <Link key={index} href={value.link} >
-                <a className="nav-link">{value.title}</a>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
+export default Nav
