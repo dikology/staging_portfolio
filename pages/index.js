@@ -3,7 +3,8 @@ import BgAnimation from '../components/BackgroundAnimation/BackgroundAnimation'
 import Intro from '../components/Intro';
 import Projects from '../components/Projects/Projects';
 import Technologies from '../components/Technologies/Technologies';
-import { Footer, Contact } from '../components/Footer';
+import Timeline from '../components/Timeline/Timeline';
+
 import { about, contact, intro, navigation, projects, SEO, work } from '../config/config';
 import { Header } from '../components/Header';
 
@@ -21,12 +22,7 @@ export default function Home() {
         </Section>
         <Projects />
         <Technologies />
-        <Contact
-          title={contact.title}
-          description={contact.description}
-          buttons={contact.buttons}
-        />
-        <Footer />
+        <Timeline />
       </Layout>
     </Fragment>
   );
