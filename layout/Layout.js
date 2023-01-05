@@ -9,7 +9,7 @@ export const Layout = ({children}) => {
   return (
     <Container>
      <Navbar/>
-     <main>{children}</main> 
+      <main>{children}</main> 
      <Footer/>
     </Container>
   )

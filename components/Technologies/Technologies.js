@@ -1,5 +1,6 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { RiProductHuntLine, RiProductHuntFill, RiDatabase2Line, RiDatabase2Fill } from 'react-icons/ri';
+import { SiChinaeasternairlines } from 'react-icons/si'
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
@@ -13,29 +14,29 @@ const Technologies = () =>  (
     </SectionText>
     <List>
         <ListItem>
-            <DiReact size="3rem" />
+            <RiProductHuntLine size="3rem" />
             <ListContainer>
-                <ListTitle>FE</ListTitle>
+                <ListTitle>Product Management</ListTitle>
                 <ListParagraph>
-                    exp with
+                    Create products based on data and user/buyer feedback.
                 </ListParagraph>
             </ListContainer>
         </ListItem>
         <ListItem>
-            <DiFirebase size="3rem" />
+            <RiDatabase2Line size="3rem" />
             <ListContainer>
-                <ListTitle>BE</ListTitle>
+                <ListTitle>Data Analytics</ListTitle>
                 <ListParagraph>
-                    exp with
+                    Learning the ropes and getting insights from vast oceans of data.
                 </ListParagraph>
             </ListContainer>
         </ListItem>
         <ListItem>
-            <DiZend size="3rem" />
+            <SiChinaeasternairlines size="3rem" />
             <ListContainer>
-                <ListTitle>UX</ListTitle>
+                <ListTitle>Learning Chinese</ListTitle>
                 <ListParagraph>
-                    exp with
+                    To be able to expand my universe with foreign content.
                 </ListParagraph>
             </ListContainer>
         </ListItem>

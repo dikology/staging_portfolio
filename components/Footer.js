@@ -6,7 +6,7 @@ import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTi
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper id="contact">
 		<LinkList>
 			<LinkColumn>
 				<LinkTitle>Telegram</LinkTitle>
@@ -19,19 +19,19 @@ const Footer = () => {
 			<SocialIconsContainer>
 				<CompanyContainer>
 					<Slogan>
-						slogan
+						Coffee Chat! Please do not hesitate to telegram me. Alternatively, feel free to reach out directly by email.
 					</Slogan>
 				</CompanyContainer>
 				<SocialContainer>
-				<SocialIcons href="https://github.com/dikology">
-					<AiFillGithub size="3rem" />
-				</SocialIcons>
-				<SocialIcons href="https://linkedin.com/dikology">
-					<AiFillLinkedin size="3rem" />
-				</SocialIcons>
-				<SocialIcons href="https://instagram.com/unpotato_lifestyle">
-					<AiFillInstagram size="3rem" />
-				</SocialIcons>
+					<SocialIcons href="https://github.com/dikology">
+						<AiFillGithub size="3rem" />
+					</SocialIcons>
+					<SocialIcons href="https://linkedin.com/dikology">
+						<AiFillLinkedin size="3rem" />
+					</SocialIcons>
+					<SocialIcons href="https://instagram.com/unpotato_lifestyle">
+						<AiFillInstagram size="3rem" />
+					</SocialIcons>
 				</SocialContainer>
 			</SocialIconsContainer>
 		</LinkList>

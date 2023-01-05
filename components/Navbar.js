@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
 import { DiCssdeck } from 'react-icons/di'
+import { FaTelegramPlane } from 'react-icons/fa'
 
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './NavStyles'
 
@@ -23,7 +24,7 @@ const Nav = () => (
       </li>
       <li>
         <Link href="#tech">
-          <NavLink>Technologies</NavLink>
+          <NavLink>What I do</NavLink>
         </Link>
       </li>
       <li>
@@ -33,6 +34,9 @@ const Nav = () => (
       </li>
     </Div2>
     <Div3>
+    <SocialIcons href="https://t.me/dikobrist">
+        <FaTelegramPlane size="3rem" />
+      </SocialIcons>
       <SocialIcons href="https://github.com/dikology">
         <AiFillGithub size="3rem" />
       </SocialIcons>
